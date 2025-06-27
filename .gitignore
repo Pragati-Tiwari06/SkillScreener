@@ -1,23 +1,43 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+---
 
-# testing
-/coverage
+### ✅ **2. Recommended `.gitignore`**
 
-# production
-/build
+Update your `.gitignore` to exclude unnecessary or sensitive files:
 
-# misc
+```gitignore
+# Node
+node_modules/
+build/
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.env
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# macOS
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Windows
+Thumbs.db
+
+# Coverage
+.coverage
+htmlcov/
+
+# React
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local

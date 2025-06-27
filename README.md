@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# SkillScreener 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**AI-powered Resume Screener** that matches your resume with a job description and provides instant feedback, skill match analysis, and suggestions.
 
-## Available Scripts
+## 🔍 Features
+ 
 
-In the project directory, you can run:
+- NLP-Based Resume Parsing & Skill Matching🧠
+- ATS Score Calculation  based on Matching Skills📊
+- Firebase Authentication 🔐
+- Modern UI 
+- PDF Report Generation 📄
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Frontend: React, TailwindCSS, Framer Motion
+- Backend: Flask (Python), spaCy, Pandas
+- Auth: Firebase Authentication
+- Deployment: GitHub Pages / Render / Vercel (suggested)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
+SkillScreener/
+│
+├── client/              # React frontend
+│   ├── src/
+│   └── public/
+│
+├── server/              # Flask backend
+│   ├── app.py
+│   └── resume_utils.py
+│
+├── .gitignore
+├── README.md
+└── package.json
 
-### `npm test`
+## 🛠️ Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repo:**
 
-### `npm run build`
+```bash
+git clone https://github.com/your-username/SkillScreener.git
+cd SkillScreener
+2.  **Install Dependencies :**
+cd client
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd ../server
+pip install -r requirements.txt
+3. ** Start development servers:**
+##React Frontend:
+cd client
+npm start
+##Flask Backend:
+cd server
+python app.py
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Authentication**
+This project uses Firebase Email/Password Authentication. You can sign up, log in, and securely access resume analysis features.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ **License**
+ MIT License. Feel free to fork and enhance! ❤️
+ ** Contributing **
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
