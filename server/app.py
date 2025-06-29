@@ -5,6 +5,9 @@ from resume_utils import extract_resume_text, extract_skills_dynamic
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/", methods=["GET"])
+def index():
+    return jsonify({"message": "✅ Resume Screener API is running!"})
 @app.route('/analyze-resume', methods=['POST'])
 def analyze_resume():
     if 'resume' not in request.files or 'job_description' not in request.form:
