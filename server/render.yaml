@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: flask-nlp-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: |
+      python -m spacy download en_core_web_sm &&
+      gunicorn app:app
+    plan: free
+    branch: main
+    autoDeploy: true
