@@ -17,7 +17,15 @@ export default function Upload({ onResult }) {
     formData.append("job_description", jobDesc);
 
     try {
-      const response = await axios.post("https://skillscreener.onrender.com", formData);
+      const response = await axios.post(
+        "https://skillscreener.onrender.com/analyze-resume", // ✅ correct endpoint
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       onResult(response.data);
     } catch (error) {
       console.error("Upload failed:", error);
@@ -42,7 +50,9 @@ export default function Upload({ onResult }) {
           className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-lg flex flex-col gap-6"
         >
           <div>
-            <label className="block mb-2 font-medium text-gray-700">Upload Resume (PDF only)</label>
+            <label className="block mb-2 font-medium text-gray-700">
+              Upload Resume (PDF only)
+            </label>
             <input
               type="file"
               accept=".pdf"
@@ -52,7 +62,9 @@ export default function Upload({ onResult }) {
           </div>
 
           <div>
-            <label className="block mb-2 font-medium text-gray-700">Paste Job Description</label>
+            <label className="block mb-2 font-medium text-gray-700">
+              Paste Job Description
+            </label>
             <textarea
               rows="6"
               value={jobDesc}
