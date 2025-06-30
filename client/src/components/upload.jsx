@@ -17,7 +17,7 @@ export default function Upload({ onResult }) {
     formData.append("job_description", jobDesc);
 
     try {
-      const response = await axios.post("http://localhost:5000/analyze-resume", formData);
+      const response = await axios.post("https://skillscreener.onrender.com", formData);
       onResult(response.data);
     } catch (error) {
       console.error("Upload failed:", error);
